@@ -116,7 +116,7 @@ public class WalletManager : MonoBehaviour
     // write date to contact ,it  will use some gas
     public IEnumerator SignTransaction(TransactionInput transactionInput, System.Action<UnityRequest<string>> result)
     {
-        var transactionSignedRequest = new TransactionSignedUnityRequest(URL, privateKey, publicAddress);
+        var transactionSignedRequest = new TransactionSignedUnityRequest(URL, privateKey);
 
         yield return transactionSignedRequest.SignAndSendTransaction(transactionInput);
 
